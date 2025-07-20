@@ -18,13 +18,22 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">Lipeti</h1>
+        <h1 className="text-5xl md:text-6xl xl:text-7xl font-normal mb-4 text-white">
+          Clone seu{" "}
+          <span className="text-gradient">
+            melhor{" "}
+            <span className="text-gradient  title-slider">
+              vendedor
+            </span>
+          </span>{" "}
+          com IA
+        </h1>
         <p className="text-xl md:text-2xl text-white/80 max-w-xl mb-6">
-          Tecnologia sob medida para impulsionar sua empresa.
+          Tecnologia sob medida para impulsionar sua empresa e daiane linda.
         </p>
         <a
           href="#contact"
-          className="mt-2 px-6 py-3 bg-indigo-600 text-white rounded-2xl shadow hover:bg-indigo-700 transition"
+          className="mt-2 px-6 py-3 text-white rounded-2xl btn-gradient transition"
         >
           Solicitar orçamento
         </a>
