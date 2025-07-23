@@ -12,10 +12,17 @@ const Services = () => {
   const services = [
     {
       icon: Code2,
-      title: 'Sistemas Web',
+      title: 'Sistemas Web & Consultoria',
       description: 'Desenvolvimento de sistemas web robustos e escaláveis, adaptados às necessidades específicas do seu negócio.',
       features: ['Arquitetura moderna', 'Alta performance', 'Segurança avançada', 'Integração com APIs'],
       color: 'from-blue-600 to-blue-700'
+    },
+    {
+      icon: Zap,
+      title: 'Automações',
+      description: 'Automatize processos repetitivos e integre seus sistemas para máxima eficiência operacional.',
+      features: ['Workflows personalizados', 'Integração de sistemas', 'Relatórios automáticos', 'Notificações'],
+      color: 'from-cyan-600 to-blue-600'
     },
     {
       icon: Globe,
@@ -31,20 +38,13 @@ const Services = () => {
       features: ['Conversão otimizada', 'A/B Testing', 'Integração CRM', 'Analytics avançado'],
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      icon: Zap,
-      title: 'Automações',
-      description: 'Automatize processos repetitivos e integre seus sistemas para máxima eficiência operacional.',
-      features: ['Workflows personalizados', 'Integração de sistemas', 'Relatórios automáticos', 'Notificações'],
-      color: 'from-cyan-600 to-blue-600'
-    }
   ];
 
   return (
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
+        <motion.div
           ref={headerRef}
           initial="hidden"
           animate={headerControls}
@@ -55,13 +55,13 @@ const Services = () => {
             Nossos Serviços
           </motion.h2>
           <motion.p variants={fadeInUp} className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Oferecemos soluções completas em tecnologia para impulsionar seu negócio 
+            Oferecemos soluções completas em tecnologia para impulsionar seu negócio
             no mundo digital com qualidade e inovação.
           </motion.p>
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div 
+        <motion.div
           ref={servicesRef}
           initial="hidden"
           animate={servicesControls}
@@ -79,15 +79,15 @@ const Services = () => {
                 <div className="w-16 h-16 gradient-lipeti rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="h-8 w-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
+
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -102,7 +102,7 @@ const Services = () => {
         </motion.div>
 
         {/* CTA */}
-        <motion.div 
+        <motion.div
           ref={ctaRef}
           initial="hidden"
           animate={ctaControls}

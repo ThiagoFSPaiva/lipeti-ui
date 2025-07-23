@@ -65,7 +65,7 @@ const Hero = () => {
               initial="hidden"
               animate={statsControls}
               variants={staggerContainer}
-              className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200"
+              className="grid grid-cols-2 gap-8 pt-8 border-t border-gray-200"
             >
               <motion.div variants={fadeInUp}>
                 <div className="text-3xl font-bold text-blue-700">200+</div>
@@ -75,10 +75,7 @@ const Hero = () => {
                 <div className="text-3xl font-bold text-cyan-600">98%</div>
                 <div className="text-gray-600">Satisfação</div>
               </motion.div>
-              <motion.div variants={fadeInUp}>
-                <div className="text-3xl font-bold text-blue-500">5+</div>
-                <div className="text-gray-600">Anos</div>
-              </motion.div>
+
             </motion.div>
           </motion.div>
 

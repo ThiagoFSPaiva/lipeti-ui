@@ -61,40 +61,40 @@ const Testimonials = () => {
           ref={testimonialsRef}
           initial="hidden"
           animate={testimonialsControls}
-          variants={staggerContainer}
+          variants={staggerContainer} 
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               variants={scaleIn}
-              className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300 relative"
+              className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300 relative flex flex-col h-full"
             >
               <Quote className="absolute top-6 right-6 h-8 w-8 text-blue-700/20" />
               
               {/* Rating */}
               <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                ))}
+          {[...Array(testimonial.rating)].map((_, i) => (
+            <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+          ))}
               </div>
               
               {/* Content */}
               <p className="text-gray-600 mb-6 leading-relaxed italic">
-                "{testimonial.content}"
+          "{testimonial.content}"
               </p>
               
               {/* Author */}
-              <div className="flex items-center">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                </div>
+              <div className="flex items-center mt-auto">
+          <img
+            src={testimonial.avatar}
+            alt={testimonial.name}
+            className="w-12 h-12 rounded-full object-cover mr-4"
+          />
+          <div>
+            <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+            <p className="text-gray-600 text-sm">{testimonial.role}</p>
+          </div>
               </div>
             </motion.div>
           ))}
@@ -106,7 +106,7 @@ const Testimonials = () => {
           initial="hidden"
           animate={statsControls}
           variants={staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200"
+          className="grid grid-cols-3 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-200"
         >
           <motion.div variants={fadeInUp} className="text-center">
             <div className="text-3xl font-bold text-blue-700 mb-2">98%</div>
@@ -119,10 +119,6 @@ const Testimonials = () => {
           <motion.div variants={fadeInUp} className="text-center">
             <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
             <div className="text-gray-600">Clientes Ativos</div>
-          </motion.div>
-          <motion.div variants={fadeInUp} className="text-center">
-            <div className="text-3xl font-bold text-cyan-500 mb-2">5+</div>
-            <div className="text-gray-600">Anos de Experiência</div>
           </motion.div>
         </motion.div>
       </div>

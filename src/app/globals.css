@@ -24,6 +24,10 @@
     background: linear-gradient(to right, lab(55 -10.08 -38.93), rgb(38 80 155));
   }
   
+  .gradient-lipeti-claro {
+ background: linear-gradient(to top left, #0c61a5, lab(65% -22.96 -30.22))
+  }
+  
   .gradient-lipeti-br {
     background: linear-gradient(to bottom right, lab(55 -10.08 -38.93), rgb(38 80 155));
   }

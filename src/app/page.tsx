@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import Solutions from "./components/Solutions";
 import Testimonials from "./components/Testimonials";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 
@@ -20,9 +21,10 @@ export default function Home() {
         <Hero />
         <Services />
         <About />
+        <Solutions />
         {/* <Portfolio /> */}
         <WhatsAppFloat />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
         <Footer />
       </div>

@@ -43,15 +43,15 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Telefone',
-      content: '+55 (81) 9999-9999',
-      href: 'tel:+5581999999999'
+      content: '+55 (81) 97908-3470',
+      href: 'tel:+5581979083470'
     },
-    {
-      icon: MapPin,
-      title: 'Endereço',
-      content: 'Recife, PE - Brasil',
-      href: '#'
-    }
+    // {
+    //   icon: MapPin,
+    //   title: 'Endereço',
+    //   content: 'Recife, PE - Brasil',
+    //   href: '#'
+    // }
   ];
 
   return (

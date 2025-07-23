@@ -15,7 +15,7 @@ const Footer = () => {
     ],
     company: [
       { label: 'Sobre Nós', href: '#about' },
-      { label: 'Portfólio', href: '#portfolio' },
+      // { label: 'Portfólio', href: '#portfolio' },
       { label: 'Depoimentos', href: '#testimonials' },
       { label: 'Contato', href: '#contact' }
     ],
@@ -101,7 +101,7 @@ const Footer = () => {
           </div>
 
           {/* Support */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-6">Suporte</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link, index) => (
@@ -115,8 +115,8 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
+          </div>*/}
+        </div> 
 
         {/* Bottom Section */}
         <div className="py-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">

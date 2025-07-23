@@ -19,7 +19,7 @@ const WhatsAppFloat = () => {
 
   const openWhatsApp = () => {
     const phoneNumber = '558179083470';
-    const message = encodeURIComponent('Olá! eu gostaria de conversar.');
+    const message = encodeURIComponent('Olá! Estou com um projeto em mente, podemos falar sobre isso?');
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappURL, '_blank');
     setShowMessage(false);
