@@ -1,31 +1,30 @@
 import Image from "next/image";
-import { Hero } from "./components/Hero";
-import { Differentials } from "./components/Differenctials";
-import { About } from "./components/About";
-import { Testimonials } from "./components/Testimontials";
-import { Contact } from "./components/Contact";
-import { Services } from "./components/Services";
-import Head from "next/head";
-import { Navbar } from "./components/NavBar";
+
+
+
+
+import Portfolio from "./components/Portfolio";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Services from "./components/Services";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Lipeti | Soluções Digitais</title>
-        <meta name="description" content="Soluções digitais modernas para impulsionar sua empresa. Criação de sites, sistemas e automações sob medida." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
-      <main className="bg-gradient-to-b from-white to-indigo-50">
-        <Hero />
-        <About />
-        <Services />
-        <Differentials />
-        <Testimonials />
-        <Contact />
-      </main>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <Hero />
+      <Services />
+      <About />
+      {/* <Portfolio /> */}
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </div>
     </>
   );
 }
