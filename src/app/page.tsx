@@ -9,20 +9,23 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function Home() {
   return (
     <>
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <Services />
-      <About />
-      {/* <Portfolio /> */}
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+
+      <div className="min-h-screen bg-white overflow-hidden">
+        <Header />
+        <Hero />
+        <Services />
+        <About />
+        {/* <Portfolio /> */}
+        <WhatsAppFloat />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }
