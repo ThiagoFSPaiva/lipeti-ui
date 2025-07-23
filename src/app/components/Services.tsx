@@ -1,14 +1,13 @@
 'use client';
 
-import React from 'react';
-import { Globe, Zap, Settings, TrendingUp, Code2, Smartphone } from 'lucide-react';
+import { fadeInUp, scaleIn, staggerContainer, useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { motion } from 'framer-motion';
-import { useScrollAnimation, fadeInUp, staggerContainer, scaleIn } from '@/hooks/useScrollAnimation';
+import { Code2, Globe, Smartphone, TrendingUp, Zap } from 'lucide-react';
 
 const Services = () => {
-  const { ref: headerRef, controls: headerControls } = useScrollAnimation(0.2);
-  const { ref: servicesRef, controls: servicesControls } = useScrollAnimation(0.1);
-  const { ref: ctaRef, controls: ctaControls } = useScrollAnimation(0.3);
+  const { ref: headerRef, controls: headerControls } = useScrollAnimation();
+  const { ref: servicesRef, controls: servicesControls } = useScrollAnimation();
+  const { ref: ctaRef, controls: ctaControls } = useScrollAnimation();
 
   const services = [
     {

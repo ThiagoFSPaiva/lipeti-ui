@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import React from 'react';
@@ -6,9 +8,9 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, staggerContainer, scaleIn } from '@/hooks/useScrollAnimation';
 
 const Testimonials = () => {
-  const { ref: headerRef, controls: headerControls } = useScrollAnimation(0.2);
-  const { ref: testimonialsRef, controls: testimonialsControls } = useScrollAnimation(0.1);
-  const { ref: statsRef, controls: statsControls } = useScrollAnimation(0.2);
+  const { ref: headerRef, controls: headerControls } = useScrollAnimation();
+  const { ref: testimonialsRef, controls: testimonialsControls } = useScrollAnimation();
+  const { ref: statsRef, controls: statsControls } = useScrollAnimation();
 
   const testimonials = [
     {

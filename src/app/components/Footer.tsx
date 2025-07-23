@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React from 'react';
-import { Code, Mail, Phone, MapPin, Instagram, Linkedin, Github } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

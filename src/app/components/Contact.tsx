@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '@/hooks/useScrollAnimation';
 
 const Contact = () => {
-  const { ref: headerRef, controls: headerControls } = useScrollAnimation(0.2);
-  const { ref: contactRef, controls: contactControls } = useScrollAnimation(0.1);
-  const { ref: formRef, controls: formControls } = useScrollAnimation(0.1);
+  const { ref: headerRef, controls: headerControls } = useScrollAnimation();
+  const { ref: contactRef, controls: contactControls } = useScrollAnimation();
+  const { ref: formRef, controls: formControls } = useScrollAnimation();
 
   const [formData, setFormData] = useState({
     name: '',

@@ -2,12 +2,50 @@
 
 import React from 'react';
 import { Users, Award, Clock, Heart } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useScrollAnimation, fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '@/hooks/useScrollAnimation';
+import { motion, Variants, easeInOut } from 'framer-motion';
+import { useScrollAnimation, staggerContainer } from '@/hooks/useScrollAnimation';
+
+const fadeInLeft: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+    transition: {
+      duration: 0.6,
+      ease: easeInOut,
+    },
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: easeInOut,
+    },
+  },
+};
+
+const fadeInUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    transition: {
+      duration: 0.6,
+      ease: easeInOut,
+    },
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: easeInOut,
+    },
+  },
+};
 
 const About = () => {
-  const { ref: contentRef, controls: contentControls } = useScrollAnimation(0.2);
-  const { ref: valuesRef, controls: valuesControls } = useScrollAnimation(0.1);
+  const { ref: contentRef, controls: contentControls } = useScrollAnimation();
+  const { ref: valuesRef, controls: valuesControls } = useScrollAnimation();
 
   const values = [
     {
@@ -49,65 +87,31 @@ const About = () => {
                 Lipeti
               </span>
             </motion.h2>
-            
-            <motion.p variants={fadeInLeft} className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Somos uma empresa especializada em desenvolvimento de soluções digitais inovadoras. 
-              Com mais de 5 anos de experiência no mercado, já entregamos mais de 200 projetos 
-              para empresas de diversos segmentos.
-            </motion.p>
-            
-            <motion.p variants={fadeInLeft} className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Nossa missão é transformar ideias em soluções tecnológicas que geram resultados 
-              reais para nossos clientes, sempre priorizando a excelência técnica e a satisfação 
-              do cliente.
-            </motion.p>
 
-            <motion.div variants={fadeInLeft} className="grid grid-cols-2 gap-6 mb-8">
-              <motion.div 
-                variants={fadeInUp}
-                className="text-center p-4 bg-white rounded-lg border border-gray-200"
-              >
-                <div className="text-2xl font-bold text-blue-700 mb-1">200+</div>
-                <div className="text-gray-600 text-sm">Projetos Entregues</div>
-              </motion.div>
-              <motion.div 
-                variants={fadeInUp}
-                className="text-center p-4 bg-white rounded-lg border border-gray-200"
-              >
-                <div className="text-2xl font-bold text-cyan-600 mb-1">98%</div>
-                <div className="text-gray-600 text-sm">Taxa de Satisfação</div>
-              </motion.div>
-            </motion.div>
+            <motion.p variants={fadeInLeft} className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Somos uma equipe especializada em desenvolvimento web, automações e soluções tecnológicas de ponta. Nosso objetivo é transformar ideias em experiências digitais excepcionais.
+            </motion.p>
           </motion.div>
 
-          {/* Values */}
+          {/* Valores */}
           <motion.div 
             ref={valuesRef}
             initial="hidden"
             animate={valuesControls}
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            className="grid sm:grid-cols-2 gap-8"
           >
-            {values.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <motion.div
-                  key={index}
-                  variants={fadeInRight}
-                  className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="w-12 h-12 gradient-lipeti rounded-lg flex items-center justify-center mb-4">
-                    <IconComponent className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {value.description}
-                  </p>
-                </motion.div>
-              );
-            })}
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-lg transition-shadow"
+              >
+                <value.icon className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>

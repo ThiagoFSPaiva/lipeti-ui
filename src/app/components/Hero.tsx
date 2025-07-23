@@ -1,14 +1,13 @@
 'use client';
 
-import React from 'react';
-import { ArrowRight, Play, Star } from 'lucide-react';
+import { fadeInRight, fadeInUp, staggerContainer, useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { motion } from 'framer-motion';
-import { useScrollAnimation, fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '@/hooks/useScrollAnimation';
+import { ArrowRight, Star } from 'lucide-react';
 
 const Hero = () => {
-  const { ref: heroRef, controls: heroControls } = useScrollAnimation(0.2);
-  const { ref: statsRef, controls: statsControls } = useScrollAnimation(0.3);
-  const { ref: visualRef, controls: visualControls } = useScrollAnimation(0.2);
+  const { ref: heroRef, controls: heroControls } = useScrollAnimation();
+  const { ref: statsRef, controls: statsControls } = useScrollAnimation();
+  const { ref: visualRef, controls: visualControls } = useScrollAnimation();
 
   return (
     <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">

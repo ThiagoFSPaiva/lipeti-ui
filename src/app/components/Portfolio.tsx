@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import React from 'react';
@@ -6,9 +7,9 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, staggerContainer, scaleIn } from '@/hooks/useScrollAnimation';
 
 const Portfolio = () => {
-  const { ref: headerRef, controls: headerControls } = useScrollAnimation(0.2);
-  const { ref: projectsRef, controls: projectsControls } = useScrollAnimation(0.1);
-  const { ref: ctaRef, controls: ctaControls } = useScrollAnimation(0.3);
+  const { ref: headerRef, controls: headerControls } = useScrollAnimation();
+  const { ref: projectsRef, controls: projectsControls } = useScrollAnimation();
+  const { ref: ctaRef, controls: ctaControls } = useScrollAnimation();
 
   const projects = [
     {

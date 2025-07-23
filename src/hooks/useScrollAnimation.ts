@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { useInView, useAnimation } from 'framer-motion';
+import { useInView, useAnimation, Variants, easeInOut, easeOut } from 'framer-motion';
 
-export const useScrollAnimation = (threshold = 0.1, once = true) => {
+export const useScrollAnimation = (once = true) => {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold, once });
+  const inView = useInView(ref, { once });
 
   useEffect(() => {
     if (inView) {
@@ -17,65 +17,66 @@ export const useScrollAnimation = (threshold = 0.1, once = true) => {
   return { ref, controls };
 };
 
-export const fadeInUp = {
-  hidden: { 
-    opacity: 0, 
+// Animações com easing corrigido
+export const fadeInUp: Variants = {
+  hidden: {
+    opacity: 0,
     y: 60,
-    transition: { duration: 0.3, ease: "easeOut" }
+    transition: { duration: 0.3, ease: easeOut },
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
-};
-
-export const fadeInLeft = {
-  hidden: { 
-    opacity: 0, 
-    x: -60,
-    transition: { duration: 0.3, ease: "easeOut" }
+    transition: { duration: 0.3, ease: easeOut },
   },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
 };
 
-export const fadeInRight = {
-  hidden: { 
-    opacity: 0, 
+export const fadeInLeft: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+    transition: { duration: 0.6, ease: easeInOut },
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: easeInOut },
+  },
+};
+
+export const fadeInRight: Variants = {
+  hidden: {
+    opacity: 0,
     x: 60,
-    transition: { duration: 0.3, ease: "easeOut" }
+    transition: { duration: 0.3, ease: easeOut },
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
+    transition: { duration: 0.3, ease: easeOut },
+  },
 };
 
-export const staggerContainer = {
+export const scaleIn: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+    transition: { duration: 0.3, ease: easeOut },
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3, ease: easeOut },
+  },
+};
+
+export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.05
-    }
-  }
-};
-
-export const scaleIn = {
-  hidden: { 
-    opacity: 0, 
-    scale: 0.8,
-    transition: { duration: 0.3, ease: "easeOut" }
+      delayChildren: 0.05,
+    },
   },
-  visible: { 
-    opacity: 1, 
-    scale: 1,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
 };
