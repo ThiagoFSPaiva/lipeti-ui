@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 'use client';
-
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -22,10 +22,17 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-       
-        <Link href="/" className="flex items-center h-[35px]">
-          <img src="/logo.svg" alt="Lipeti Logo" height={35} className="h-[35px] w-auto" />
-        </Link>
+
+          <Link href="/" className="flex items-center h-[35px]">
+            <Image
+              src="/logo.svg"
+              alt="Lipeti Logo"
+              height={35}
+              width={120} // ou um valor adequado à sua logo, ajuste se necessário
+              className="h-[35px] w-auto"
+              priority // Opcional: remova se não for logo principal visível ao carregar
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
