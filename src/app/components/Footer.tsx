@@ -28,9 +28,8 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' }
+    { icon: Instagram, href: 'https://www.instagram.com/lipeti.solutions/', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/lipeti', label: 'LinkedIn' },
   ];
 
   return (

@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '@/hooks/useScrollAnimation';
 
-const Contact = () => {
+export default function Contact() {
   const { ref: headerRef, controls: headerControls } = useScrollAnimation();
   const { ref: contactRef, controls: contactControls } = useScrollAnimation();
   const { ref: formRef, controls: formControls } = useScrollAnimation();
@@ -17,19 +17,42 @@ const Contact = () => {
     service: '',
     message: ''
   });
+
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simular envio do formulário
+
     setIsSubmitted(true);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
+
+    try {
+      await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setIsSubmitted(false);
+      return;
+    }
+
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
@@ -246,5 +269,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;
