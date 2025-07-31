@@ -13,7 +13,7 @@ const Header = () => {
     { label: 'Início', href: '#home' },
     { label: 'Serviços', href: '#services' },
     { label: 'Sobre', href: '#about' },
-    { label: 'Portfólio', href: '#portfolio' },
+    // { label: 'Portfólio', href: '#portfolio' },
     { label: 'Contato', href: '#contact' }
   ];
 
