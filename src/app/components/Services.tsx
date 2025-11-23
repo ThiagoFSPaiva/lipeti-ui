@@ -1,138 +1,58 @@
-// Troca de estilos entre os componentes Services e Solutions
-// +2 novos cards no Services, -2 no Solutions, conforme solicitado
+import Link from "next/link";
+import { SERVICES } from "@/app/constants/constants";
+import { ArrowUpRight } from "lucide-react";
 
-'use client';
-
-import { motion } from 'framer-motion';
-import {
-  fadeInUp,
-  scaleIn,
-  staggerContainer,
-  useScrollAnimation,
-} from '@/hooks/useScrollAnimation';
-import {
-  Code2,
-  Zap,
-  Globe,
-  TrendingUp,
-  Smartphone,
-  ShieldCheck,
-  ServerCog,
-  Building2,
-  ShoppingCart,
-  Users,
-  Briefcase,
-  Heart,
-  GraduationCap,
-} from 'lucide-react';
-
-// SERVICES
-export default function Services() {
-  const { ref: headerRef, controls: headerControls } = useScrollAnimation();
-  const { ref: servicesRef, controls: servicesControls } = useScrollAnimation();
-  const { ref: ctaRef, controls: ctaControls } = useScrollAnimation();
-
-  const services = [
-    {
-      icon: Code2,
-      title: 'Desenvolvimento Web',
-      description: 'Sites modernos, responsivos e sob medida — pensados para encantar e converter.',
-    },
-
-    {
-      icon: Zap,
-      title: 'Automação Inteligente',
-      description: 'Automatize tarefas repetitivas, reduza custos e ganhe escala com soluções que funcionam por você.',
-    },
-    {
-      icon: Building2,
-      title: 'Sistemas Empresariais',
-      description: 'Automatize processos e tome decisões com mais segurança por meio de sistemas sob medida.',
-    },
-    {
-      icon: ShoppingCart,
-      title: 'E-commerce',
-      description: 'Lojas virtuais com foco em performance, segurança e experiência de compra envolvente.',
-    },
-    {
-      icon: Smartphone,
-      title: 'Aplicativos Mobile',
-      description: 'Apps nativos para Android e iOS que conectam sua marca ao dia a dia do seu público.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Landing Pages',
-      description: 'Páginas otimizadas para capturar leads e gerar resultados — com design e estratégia alinhados.',
-    },
-
-  ];
-
+export const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-24 bg-dark-900 relative">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-lipeti-900 to-transparent opacity-50" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          ref={headerRef}
-          initial="hidden"
-          animate={headerControls}
-          variants={staggerContainer}
-          className="text-center mb-16"
-        >
-          <motion.h2
-            variants={fadeInUp}
-            className="text-4xl font-bold text-gray-900 mb-4"
-          >
-            Nossos Serviços
-          </motion.h2>
-          <motion.p
-            variants={fadeInUp}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Soluções personalizadas em tecnologia para todos os tipos de projeto.
-          </motion.p>
-        </motion.div>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-lipeti-400 font-medium tracking-wider uppercase mb-3 text-sm">
+            Nossas Soluções
+          </h2>
 
-        <motion.div
-          ref={servicesRef}
-          initial="hidden"
-          animate={servicesControls}
-          variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={scaleIn}
-              className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group"
-            >
-              <div className="w-16 h-16 gradient-lipeti-claro rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-2">{service.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+          <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+            Tecnologia avançada para <br /> resultados reais
+          </h3>
 
-        <motion.div
-          ref={ctaRef}
-          initial="hidden"
-          animate={ctaControls}
-          variants={fadeInUp}
-          className="mt-16 gradient-lipeti rounded-2xl p-8 text-center text-white"
-        >
-          <h3 className="text-2xl font-bold mb-4">Pronto para inovar?</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Fale com nossa equipe e leve sua ideia ao próximo nível com tecnologia sob medida.
+          <p className="text-gray-400">
+            Da concepção ao deploy, a Lipeti entrega produtos digitais que unem estética e funcionalidade.
           </p>
-          <a
-            href="#contact"
-            className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-flex items-center"
-          >
-            Solicitar Orçamento <Smartphone className="ml-2 h-5 w-5" />
-          </a>
-        </motion.div>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {SERVICES.map((service) => (
+            <div
+              key={service.slug}
+              className="group relative bg-dark-800 border border-white/5 hover:border-lipeti-500/30 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-lipeti-900/20 overflow-hidden flex flex-col"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-lipeti-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+              <div className="relative z-10 flex-1">
+                <div className="w-12 h-12 bg-dark-950 rounded-lg flex items-center justify-center border border-white/10 mb-6 group-hover:bg-royal-600 group-hover:border-royal-500 transition-colors duration-300">
+                  <service.icon className="w-6 h-6 text-lipeti-400 group-hover:text-white" />
+                </div>
+
+                <h4 className="text-xl font-bold text-white mb-3">{service.title}</h4>
+
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  {service.description}
+                </p>
+              </div>
+
+              <Link
+                href={`/servicos/${service.slug}`}
+                className="relative z-10 inline-flex items-center text-sm font-medium text-lipeti-400 group-hover:text-lipeti-300 mt-auto"
+              >
+                Saiba mais
+                <ArrowUpRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

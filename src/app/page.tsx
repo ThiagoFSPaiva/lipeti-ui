@@ -1,33 +1,35 @@
+import { CTA } from "./components/CTA";
+import { FAQ } from "./components/FAQ";
+import { Footer } from "./components/Footer";
+import { Hero } from "./components/Hero";
+import { Navbar } from "./components/Navbar";
+import { Process } from "./components/Process";
+import { Services } from "./components/Services";
+import { Testimonials } from "./components/Testimonials";
+import { WhatsAppButton } from "./components/WhatsAppButton";
+import { WhyUs } from "./components/WhyUs";
 
 
 
 
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Solutions from "./components/Solutions";
-import Testimonials from "./components/Testimonials";
-import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function Home() {
-  return (
-    <>
+    return (
+      <>
+     
+      <WhatsAppButton />
 
-      <div className="min-h-screen bg-white overflow-hidden">
-        <Header />
-        <Hero />
-        <Services />
-        <About />
-        <Solutions />
-        {/* <Portfolio /> */}
-        <WhatsAppFloat />
-        {/* <Testimonials /> */}
-        <Contact />
+        <Navbar />
+        <main>
+          <Hero />
+          <Services />
+          <Process />
+          <WhyUs />
+          <FAQ />
+          <Testimonials />
+          <CTA />
+        </main>
         <Footer />
-      </div>
-    </>
-  );
+      </>
+    );
 }
