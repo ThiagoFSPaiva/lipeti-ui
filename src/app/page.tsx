@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import { CTA } from "./components/CTA";
 import { FAQ } from "./components/FAQ";
 import { Footer } from "./components/Footer";
@@ -26,8 +27,9 @@ export default function Home() {
           <Process />
           <WhyUs />
           <FAQ />
-          <Testimonials />
-          <CTA />
+          <Contact />
+          {/* <Testimonials /> */}
+          {/* <CTA /> */}
         </main>
         <Footer />
       </>

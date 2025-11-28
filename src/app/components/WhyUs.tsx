@@ -3,6 +3,9 @@ import { WHY_US_POINTS } from '../constants/constants';
 import { ChevronRight } from 'lucide-react';
 import { Button } from './Button';
 
+
+
+
 export const WhyUs: React.FC = () => {
   return (
     <section id="why-us" className="py-24 bg-white relative overflow-hidden">

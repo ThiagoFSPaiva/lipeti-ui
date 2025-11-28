@@ -43,13 +43,13 @@ export const Services = () => {
                 </p>
               </div>
 
-              <Link
+              {/* <Link
                 href={`/servicos/${service.slug}`}
                 className="relative z-10 inline-flex items-center text-sm font-medium text-lipeti-400 group-hover:text-lipeti-300 mt-auto"
               >
                 Saiba mais
                 <ArrowUpRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </Link>
+              </Link> */}
             </div>
           ))}
         </div>

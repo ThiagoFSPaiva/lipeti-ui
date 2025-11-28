@@ -107,7 +107,7 @@ export const SERVICES: ServiceItem[] = [
       'Conexão entre sistemas legados e modernos',
       'Webhooks e sincronização em tempo real'
     ],
-    image: 'https://images.unsplash.com/photo-1558494949-ef526b00ecd2?q=80&w=2000&auto=format&fit=crop',
+    image: 'https://i.imgur.com/ea0vFRS.png',
     icon: Code2,
   },
 ];

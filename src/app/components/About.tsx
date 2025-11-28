@@ -1,5 +1,6 @@
 import React from 'react';
-import { FEATURES, STATS } from '@/constants/constants';
+import { FEATURES, STATS } from '../constants/constants';
+
 
 export const About: React.FC = () => {
   return (

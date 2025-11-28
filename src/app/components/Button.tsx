@@ -1,9 +1,16 @@
+"use client"
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline';
   children: React.ReactNode;
   className?: string;
+}
+
+function handleContactClick() {
+  const phoneNumber = "5581979083470";
+  const url = `https://wa.me/${phoneNumber}?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Lipeti.`;
+  window.open(url, "_blank");
 }
 
 export const Button: React.FC<ButtonProps> = ({ 
@@ -23,6 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button 
+      onClick={handleContactClick}
       className={`${baseStyles} ${variants[variant]} ${className}`}
       {...props}
     >

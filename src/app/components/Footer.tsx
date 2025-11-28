@@ -16,21 +16,19 @@ export const Footer: React.FC = () => {
                 Criando o futuro digital com design de ponta e código robusto.
             </p>
             <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5"/></a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5"/></a>
+                <a href="https://www.linkedin.com/company/lipeti" className="text-gray-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5"/></a>
+                <a href="https://www.instagram.com/lipetisolutions/" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5"/></a>
             </div>
           </div>
 
           {/* Links Columns */}
-          <div>
+          {/* <div>
             <h4 className="text-white font-semibold mb-6">Empresa</h4>
             <ul className="space-y-3 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-lipeti-400 transition-colors">Sobre nós</a></li>
-                <li><a href="#" className="hover:text-lipeti-400 transition-colors">Carreiras</a></li>
-                <li><a href="#" className="hover:text-lipeti-400 transition-colors">Blog</a></li>
                 <li><a href="#" className="hover:text-lipeti-400 transition-colors">Contato</a></li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h4 className="text-white font-semibold mb-6">Serviços</h4>
