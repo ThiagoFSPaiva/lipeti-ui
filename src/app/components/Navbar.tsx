@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Hexagon } from 'lucide-react';
 import { NAV_LINKS } from '@/app/constants/constants';
-import { Button } from './Button';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { Button } from './Button';
 
 
 export const Navbar: React.FC = () => {
@@ -25,8 +26,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo Lipeti */}
           <Link href="/" className="flex items-center group cursor-pointer">
-          <img alt="Lipeti Logo" width="120" height="35" className="h-[35px] w-auto" src="/logo_white.svg"/>
-    
+            <Image alt="Lipeti Logo" width={120} height={35} className="h-[35px] w-auto" src="/logo_white.svg"/>
           </Link>
 
           {/* Desktop Menu */}

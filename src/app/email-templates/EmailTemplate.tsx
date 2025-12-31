@@ -1,12 +1,3 @@
-import { Html } from '@react-email/html';
-import { Tailwind } from '@react-email/tailwind';
-import { Container } from '@react-email/container';
-import { Heading } from '@react-email/heading';
-import { Text } from '@react-email/text';
-import { Section } from '@react-email/section';
-import { Img } from '@react-email/img';
-import { Head } from '@react-email/components';
-
 
 interface Props {
   name: string;

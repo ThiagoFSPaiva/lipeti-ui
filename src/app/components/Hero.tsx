@@ -1,7 +1,7 @@
-import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import React from 'react';
 import { Button } from './Button';
-import { ArrowRight, ChevronRight, Shield, BarChart3 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (

@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { SERVICES } from "@/app/constants/constants";
-import { ArrowUpRight } from "lucide-react";
 
 export const Services = () => {
   return (

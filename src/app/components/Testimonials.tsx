@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { TESTIMONIALS } from '@/app/constants/constants';
 import { Quote } from 'lucide-react';
 
@@ -21,10 +22,12 @@ export const Testimonials: React.FC = () => {
                     <Quote className="absolute top-8 right-8 w-8 h-8 text-lipeti-100 group-hover:text-lipeti-200 transition-colors" />
                     
                     <div className="flex items-center mb-6">
-                        <img 
+                        <Image 
                             src={item.image} 
                             alt={item.name} 
-                            className="w-12 h-12 rounded-full border-2 border-lipeti-400/20"
+                            width={48}
+                            height={48}
+                            className="rounded-full border-2 border-lipeti-400/20"
                         />
                         <div className="ml-4">
                             <h4 className="text-dark-900 font-bold text-sm">{item.name}</h4>
@@ -33,7 +36,7 @@ export const Testimonials: React.FC = () => {
                     </div>
                     
                     <p className="text-gray-600 text-sm italic leading-relaxed">
-                        "{item.content}"
+                        &quot;{item.content}&quot;
                     </p>
                 </div>
             ))}

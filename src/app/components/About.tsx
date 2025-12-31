@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { FEATURES, STATS } from '../constants/constants';
 
 
@@ -15,9 +16,10 @@ export const About: React.FC = () => {
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50">
                 {/* Placeholder for office/team photo */}
                 <div className="aspect-[4/3] bg-dark-800 relative">
-                    <img 
+                    <Image 
                         src="https://images.unsplash.com/photo-1504384308090-c54be3852f33?q=80&w=2000&auto=format&fit=crop" 
                         alt="Modern Tech Workspace" 
+                        fill
                         className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>

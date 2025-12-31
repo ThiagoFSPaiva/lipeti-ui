@@ -6,6 +6,7 @@ import { CTA } from './CTA';
 import { Button } from './Button';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 interface ServiceDetailProps {
@@ -76,14 +77,16 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
 
                     {/* Imagem */}
                     <div className="w-full lg:w-1/2">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200 border border-gray-100 group">
-                            <img 
-                                src={service.image} 
-                                alt={service.title} 
-                                className="w-full h-full object-cover aspect-[4/3] transform group-hover:scale-105 transition-transform duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 to-transparent opacity-60"></div>
-                        </div>
+                                    <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200 border border-gray-100 group">
+                                      <Image 
+                                        src={service.image} 
+                                        alt={service.title}
+                                        width={600}
+                                        height={450}
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                      />
+                                      <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 to-transparent opacity-60"></div>
+                                    </div>
                     </div>
                 </div>
             </div>

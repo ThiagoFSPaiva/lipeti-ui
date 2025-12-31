@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { X, Send, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export const WhatsAppButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ export const WhatsAppButton: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-white font-bold border-2 border-white/10">
-                  <img src="/vercel.svg" alt="Vercel" className="w-6 h-6" />
+                  <Image src="/vercel.svg" alt="Vercel" width={24} height={24} />
                 </div>
                 <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-dark-900"></div>
               </div>

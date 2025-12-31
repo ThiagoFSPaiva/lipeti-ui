@@ -1,5 +1,6 @@
+import { Instagram, Linkedin } from 'lucide-react';
 import React from 'react';
-import { Hexagon, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
+import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   return (
@@ -7,11 +8,12 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           
-          {/* Brand Column */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center mb-4">
-              <img alt="Lipeti Logo" width="120" height="35" className="h-[35px] w-auto" src="/logo_white.svg"/>
-            </div>
+            {/* Brand Column */}
+            <div className="col-span-1 md:col-span-1">
+            {/* Then replace the selection with: */}
+                  <div className="flex items-center mb-4">
+                    <Image alt="Lipeti Logo" width="120" height="35" className="h-[35px] w-auto" src="/logo_white.svg"/>
+                  </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Criando o futuro digital com design de ponta e código robusto.
             </p>

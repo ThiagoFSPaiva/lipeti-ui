@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { WHY_US_POINTS } from '../constants/constants';
 import { ChevronRight } from 'lucide-react';
 import { Button } from './Button';
@@ -16,10 +17,11 @@ export const WhyUs: React.FC = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
                 <div className="aspect-[4/4] bg-dark-900 relative group overflow-hidden">
-                    <img 
+                    <Image 
                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop" 
-                        alt="Dashboard Analysis" 
-                        className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                        alt="Dashboard Analysis"
+                        fill
+                        className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-royal-600/60 to-lipeti-400/30 mix-blend-multiply"></div>
                 </div>

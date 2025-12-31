@@ -1,6 +1,5 @@
 
 import EmailTemplate from '@/app/email-templates/EmailTemplate';
-import path from 'path';
 import { Resend } from 'resend';
 
 
@@ -12,7 +11,7 @@ export async function POST(req: Request) {
   const { name, email, phone, service, message } = body;
 
   try {
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
     from: 'Acme <onboarding@resend.dev>',
     to: ['thiagofellipe151@gmail.com'],
     subject: `Novo contato de ${name}`,

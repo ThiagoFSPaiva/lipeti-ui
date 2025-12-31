@@ -4,16 +4,18 @@ import { SERVICES } from '@/app/constants/constants';
 import { ServiceDetail } from '@/app/components/ServiceDetail';
 import { ServiceItem } from '@/types/types';
 
+// CORREÇÃO AQUI: No Next.js 15+, params é uma Promise.
+// Definimos que params é uma Promessa que resolve para um objeto contendo o slug.
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-
-type Params = { params: { slug: string } };
-
+// Esta função continua síncrona pois gera a lista estática
 export async function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  // IMPORTANTE: await params antes de acessar suas propriedades
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = SERVICES.find((s) => s.slug === slug);
 
@@ -32,9 +34,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-// Tornar o componente async e aguardar params também evita o erro
-export default async function ServicePage({ params }: Params) {
+export default async function ServicePage({ params }: Props) {
+  // Await params para extrair o slug de forma segura
   const { slug } = await params;
+  
   const service = SERVICES.find((s) => s.slug === slug);
 
   if (!service) {
