@@ -1,10 +1,10 @@
-import { 
-  Code2, 
-  Cpu, 
-  Globe, 
-  LayoutDashboard, 
-  MessageSquareCode, 
-  Smartphone, 
+import {
+  Code2,
+  Cpu,
+  Globe,
+  LayoutDashboard,
+  MessageSquareCode,
+  Smartphone,
   Zap,
   ShieldCheck,
   Rocket,
@@ -55,15 +55,15 @@ export const SERVICES: ServiceItem[] = [
     icon: LayoutDashboard,
   },
   {
-    slug: 'automacao-ia',
-    title: 'Automação & IA',
-    description: 'Integração de inteligência artificial e bots para automatizar atendimento e tarefas repetitivas.',
-    longDescription: 'Aumente a produtividade da sua equipe delegando tarefas repetitivas para robôs inteligentes. Implementamos soluções de Inteligência Artificial e automação de processos (RPA) que funcionam 24/7. Desde chatbots de atendimento até processamento automático de notas fiscais, a tecnologia trabalha para você.',
+    slug: 'automacao-whatsapp-ia',
+    title: 'Automação & Chatbots',
+    description: 'Robôs de vendas que funcionam 24/7 no WhatsApp. Atenda, qualifique e venda automaticamente.',
+    longDescription: 'Transforme seu WhatsApp em uma máquina de vendas. Implementamos chatbots inteligentes que atendem seus clientes instantaneamente, qualificam leads e agendam reuniões ou fecham vendas automaticamente. Aumente seu faturamento sem aumentar sua equipe de atendimento.',
     features: [
-      'Chatbots com processamento de linguagem natural',
-      'Automação de processos repetitivos (RPA)',
-      'Integração com WhatsApp e Telegram',
-      'Análise preditiva de dados'
+      'Chatbots de Vendas para WhatsApp',
+      'Qualificação automática de Leads',
+      'Atendimento 24 horas por dia',
+      'Integração com CRMs e Planilhas'
     ],
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop',
     icon: Cpu,
@@ -184,11 +184,11 @@ export const PROCESS_STEPS = [
 ];
 
 export const WHY_US_POINTS = [
-  'Sites web de alta performance',
-  'Aplicativos intuitivos e modernos',
-  'Consultoria estratégica',
-  'Outsourcing de TI qualificado',
-  'Alocação de profissionais experientes'
+  'Foco total em Aumento de Vendas',
+  'Automação que reduz custos operacionais',
+  'Design Premium que gera autoridade',
+  'Sistemas escaláveis para alto crescimento',
+  'Suporte técnico especializado e ágil'
 ];
 
 export const FAQ_ITEMS = [

@@ -16,18 +16,18 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-grid-pattern bg-size-[60px_60px] opacity-[0.02]"></div>
       </div>
 
-       
-                {/* Visual Side (Right) - Floating Glass Cards Composition */}
-              <div className="absolute right-0 bottom-0 w-[600px] pr-12">
-              <Image
-                src="/man-blue.png"
-                width={500}
-                height={500}
-                alt="Homem futurista blue"
-                className="w-full h-auto object-contain select-none pointer-events-none"
-                priority
-              />
-              </div>
+
+      {/* Visual Side (Right) - Floating Glass Cards Composition */}
+      <div className="absolute right-0 bottom-0 w-[600px] pr-12">
+        <Image
+          src="/man-blue.png"
+          width={500}
+          height={500}
+          alt="Homem futurista blue"
+          className="w-full h-auto object-contain select-none pointer-events-none"
+          priority
+        />
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-xl leading-relaxed font-light">
-              Desenvolvemos ecossistemas digitais sob medida para escalar o faturamento do seu projeto com segurança, agilidade e design futurista.
+              Criamos ecossistemas digitais e automações de WhatsApp que transformam visitantes em clientes e escalam seu faturamento.
             </p>
 
             {/* CTA Buttons */}
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
 
         </div>
       </div>
-      
+
 
       <style>{`
         @keyframes float {
