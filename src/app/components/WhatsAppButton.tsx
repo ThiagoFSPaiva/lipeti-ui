@@ -22,7 +22,7 @@ export const WhatsAppButton: React.FC = () => {
       setTimeout(() => {
         setIsTyping(false);
         setShowMessage(true);
-      }, 1500);
+      }, 800);
     } else {
       // ao fechar, espera a animação e então desmonta
       setTimeout(() => setMounted(false), TRANSITION_MS);
