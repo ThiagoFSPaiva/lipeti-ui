@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
 
 
       {/* Visual Side (Right) - Floating Glass Cards Composition */}
-      <div className="absolute right-0 bottom-0 w-[600px] pr-12">
+      <div className="hidden lg:block absolute right-0 bottom-0 w-[600px] pr-12">
         <Image
           src="/man-blue.png"
           width={500}
